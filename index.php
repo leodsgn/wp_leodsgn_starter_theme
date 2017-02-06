@@ -6,17 +6,11 @@
 /* --------------------------------------------------- */
 ?>
 
-
+<!-- The header section -->
 <?php get_header(); ?>
 
-<!-- content -->
-<?php 
-include("main_content.php");
- ?>
-<!-- end content -->
+<!-- The content -->
+<?php /* Display content here */ ?>
 
-<!-- footer -->
-<?php
-    get_footer();
-?>
-<!-- end footer -->
+<!-- The footer section -->
+<?php get_footer(); ?>

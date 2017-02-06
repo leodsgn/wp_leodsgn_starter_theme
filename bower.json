@@ -1,17 +1,20 @@
 {
-  "name": "impacto_producoes_theme",
-  "description": "",
+  "name": "leodsgn_wp_theme",
+  "description": "Starter Theme for wordpress by @leodsgn",
   "main": "index.js",
   "authors": [
     "Leonardo Ribeiro <leoribeiro.dsgn@gmail.com>"
   ],
   "license": "MIT",
-  "homepage": "",
+  "homepage": "http://leodsgn.com",
   "ignore": [
     "**/.*",
     "node_modules",
-    "bower_components",
+    "public/lib",
     "test",
     "tests"
-  ]
+  ],
+  "dependencies": {
+    "bootstrap": "^3.3.7"
+  }
 }
