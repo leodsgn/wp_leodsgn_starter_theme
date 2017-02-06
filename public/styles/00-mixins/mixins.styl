@@ -1,0 +1,14 @@
+$L = 1024px
+$M = 768px
+$S = 350px
+
+mediaQuery($size = L)
+    if $size == L
+        @media screen and (min-width: $L)
+            {block}
+    if $size == M
+        @media screen and (min-width: $M) and (max-width: $L - 1px)
+            {block}
+    if $size == S
+        @media screen and (min-width: $S) and (max-width: $M - 1px)
+            {block}

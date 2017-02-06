@@ -1,0 +1,17 @@
+{
+  "name": "impacto_producoes_theme",
+  "description": "",
+  "main": "index.js",
+  "authors": [
+    "Leonardo Ribeiro <leoribeiro.dsgn@gmail.com>"
+  ],
+  "license": "MIT",
+  "homepage": "",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}
