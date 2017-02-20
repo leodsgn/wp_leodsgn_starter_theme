@@ -1,4 +1,4 @@
-./node_modules
-./public/lib
-./vscode
-./dist
+/node_modules
+/public/lib
+.vscode
+/dist
