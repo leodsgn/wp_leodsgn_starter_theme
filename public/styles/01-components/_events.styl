@@ -1,0 +1,30 @@
+.events
+    position: relative
+    display: flex
+    flex-direction: column
+    justify-content: space-around
+    align-items: center
+    min-height: 50vh
+    padding: 100px
+    clip-path: polygon(0% 0%, 100% 45px, 100% 90%, 0% 100%)
+    overflow: hidden
+    background: #000 url("https://source.unsplash.com/category/technology/1800x1200") no-repeat center center
+    background-attachment: fixed
+    background-size: cover
+    z-index: 2
+
+    +mq(M)
+        clip-path: polygon(0% 0%, 100% 25px, 100% 90%, 0% 100%)
+        padding: 100px 50px
+
+    +mq(S)
+        clip-path: polygon(0% 0%, 100% 25px, 100% 97%, 0% 100%)
+        padding: 100px 20px
+    
+    &__list
+        display: flex
+        flex-direction: row
+        justify-content: space-around
+        align-items: center
+        flex-wrap: wrap
+        margin: 50px 0

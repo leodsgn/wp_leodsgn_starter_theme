@@ -5,16 +5,16 @@ php = require("gulp-connect-php")
 gulp.task "php", ()->
   php.server { base: '../../../', port: 8000, keepalive: true}
 
-gulp.task "connect", ["build", "php"], ()->
+gulp.task "connect", ["build"], ()->
   bs.init({
     files: [
-      './**/*.php',
+      './**/**/*.php',
       './dist/scripts/*.js',
       './dist/styles/*.css',
       './dist/images/*.js'
       ]
     proxy:
-      target: "localhost:8000"
+      target: "impactoeventosgo.app"
       ws: true # enables websockets
     open: true
   })

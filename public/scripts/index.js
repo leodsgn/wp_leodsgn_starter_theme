@@ -1,3 +1,3 @@
 // @flow
 
-console.log("Hello world");
+require("./components/menu");

@@ -1,0 +1,103 @@
+@import "../00-mixins/mixins.styl"
+@import "../_variables.styl"
+
+$pm_distance = 50px
+
+.section
+    position: relative
+    width: 100%
+    font-family: Lato, 'Arial Narrow', Arial, sans-serif
+
+    &--gradient-right
+        &:before
+            position: absolute
+            top: 0
+            right: 0
+            content: ''
+            width: 35%
+            height: 100vh
+            background-image: linear-gradient(41.04deg, #49E0D0 0%, #3460CD 57.47%, #402162 100%);
+            clip-path: polygon(50% 0, 100% 0%, 100% 100%, 0% 100%)
+            transform: scaleY(1.5)
+            z-index: -1
+
+            +mq(S)
+                display: none
+
+    &--gradient-left
+        &:before
+            position: absolute
+            top: 0
+            left: 0
+            content: ''
+            width: 25%
+            height: 100%
+            background-image: linear-gradient(216.43deg, #49E0D0 0%, #3460CD 57.47%, #402162 100%);
+            clip-path: polygon(0% 0, 50% 0%, 100% 100%, 0% 100%)
+            transform: scaleY(1.5)
+            z-index: -1
+
+            +mq(S)
+                display: none
+
+
+    &--padding-both
+        padding-top: $pm_distance
+        padding-bottom: $pm_distance
+
+    &--padding-top
+        padding-top: $pm_distance
+
+    &--padding-bottom
+        padding-bottom: $pm_distance
+
+
+    &--margin-both
+        margin-top: $pm_distance
+        margin-bottom: $pm_distance
+
+    &--margin-top
+        margin-top: $pm_distance
+
+    &--margin-bottom
+        margin-bottom: $pm_distance
+
+    &--full
+        width: 100%
+
+    &__container
+        max-width: 1200px
+        width: 100%
+        margin: 0 auto
+        padding: inherit 25px 
+
+    &__title
+        display: block
+        position: relative
+        color: $color_primary
+        font-size: 3em
+        margin: 0 0 50px 0
+
+        +mq(S)
+            text-align: center
+
+        &--center
+            text-align: center
+
+            &:after
+                left: 50% !important
+                transform: translateX(-50%)
+
+        &:after
+            content: ''
+            background-color: $color_primary
+            width: 50px
+            height: 5px
+            position: absolute
+            bottom: -25px
+            left: 0
+
+            +mq(S)
+                left: 50%
+                transform: translateX(-50%)
+

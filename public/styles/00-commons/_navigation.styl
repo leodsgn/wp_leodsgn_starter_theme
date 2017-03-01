@@ -1,0 +1,187 @@
+@import "../_variables.styl"
+@import "../00-mixins/mixins.styl"
+
+.navigation
+    position: fixed
+    background-color #fff
+    height: 100px
+    display: flex
+    align-items: center
+    justify-content: center
+    z-index: 10
+    top: 0
+    left: 0
+    
+    &--full
+        width: 100%
+
+    &__container
+        display: flex
+        flex-direction: row
+        flex-wrap: nowrap
+        align-items: center
+        justify-content: space-between
+        align-self: center
+        max-width: 1200px
+        width: 100%
+        margin: 0 20px
+
+    &__brand
+        width: 250px
+
+        img
+            width: 100%
+            height: auto
+
+    &__nav
+        max-width: 600px
+        width: 100%
+        transition: all 0.2s ease-in-out
+
+        +mq(M)
+            max-width: 100px
+            
+        +mq(S)
+            max-width: 100px
+
+        &__list
+            display: flex
+            flex-direction: row
+            align-items: center
+            justify-content: flex-end
+            width: 100%
+            transition: all 0.2s ease-in-out
+
+            li
+                a
+                    color: $color_grey
+                    transition: 0.2s all ease-in-out
+                    text-transform: uppercase
+                    padding: 0 10px
+                    
+                    &:hover, &:focus, &:active
+                        color: $color_secondary
+                        text-decoration: none
+
+                    +mq(S)
+                        color: $white
+                        transition: 0.2s all ease-in-out
+                        text-transform: uppercase
+                        
+                        &:hover, &:focus, &:active
+                            color: $color_primary
+                            text-decoration: none
+
+                    +mq(M)
+                        color: $white
+                        transition: 0.2s all ease-in-out
+                        text-transform: uppercase
+                        
+                        &:hover, &:focus, &:active
+                            color: $color_primary
+                            text-decoration: none
+
+                +mq(S)
+                    font-size: 2em
+                    margin: 20px
+
+                +mq(M)
+                    font-size: 2em
+                    margin: 20px
+
+            +mq(M)
+                display: none
+                opacity: 0
+
+            +mq(S)
+                display: none
+                opacity: 0
+
+            &--active
+                display: flex
+                align-content: center
+                justify-content: center
+                flex-direction: column
+                position: fixed
+                width: 100%
+                height: 100vh
+                background-color: $color_secondary
+                top: 0
+                left: 0
+                opacity: 1
+
+
+    &__responsive
+        display: block
+
+        &__button
+
+            width: 40px
+            height: 40px
+            background-color transparent
+            border: none
+            outline: 0
+            transition: all 0.2s ease-in-out
+
+            span
+                display: block
+                position: relative
+                width: 30px
+                height: 3px
+                background-color #666
+                margin: 0
+                padding: 0
+                transition: all 0.2s ease-in-out
+
+                &:before
+                    content: ""
+                    position: absolute
+                    top: -10px
+                    left: 0
+                    width: 30px
+                    height: 3px
+                    background-color #666
+                    transition: all 0.2s ease-in-out
+
+                &:after
+                    content: ""
+                    position: absolute
+                    bottom: -10px
+                    left: 0
+                    width: 30px
+                    height: 3px
+                    background-color #666
+                    transition: all 0.2s ease-in-out
+
+            &--active
+                span
+                    opacity: 1
+                    background-color: $color_secondary
+
+                    &:before
+                        display: block
+                        top: 50%
+                        transform: rotate(45deg)
+                        background-color #fff
+                        opacity: 1
+
+                    &:after
+                        display: block
+                        bottom: -50%
+                        transform: rotate(-45deg)
+                        background-color #fff
+                        opacity: 1
+
+
+
+
+        +mq(L)
+            display: none
+        +mq(M)
+            display: block
+            position: relative
+            z-index: 99
+        +mq(S)
+            display: block
+            position: relative
+            z-index: 99

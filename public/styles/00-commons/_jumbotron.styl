@@ -1,0 +1,126 @@
+@import "../_variables.styl"
+@import "../00-mixins/mixins.styl"
+
+.jumbotron
+    position: relative
+    height: 400px
+    clip-path: polygon(0 0, 100% 0, 100% 80%, 0 100%)
+    overflow: hidden
+    position: relative
+    background-color: #000
+    margin: 100px 0 0 0
+    padding: 0
+    z-index: 9
+
+    &--large
+        height: 700px
+
+    &__image
+        position: fixed
+        margin: 0
+        padding: 0
+        top: 0
+        left: 0
+        right: 0
+        bottom: 0
+        min-width: 100%
+        height: 100%
+
+        +mq(S)
+            transform: translateX(-50%) scale(1.2)
+            left: 50%
+            bottom: 0
+
+        +mq(M)
+            transform: translateX(-50%)
+            left: 50%
+
+    &__title
+        position: absolute
+        color: $white !important
+        z-index: 8
+        top: 40%
+        left: 50%
+        transform: translate(-50%, -50%)
+        font-size: 75pt !important
+        line-height: 120px
+        font-weight: bold
+
+        &--black-bg
+            background-color: #000
+            padding: 10px 20px
+
+        +mq(S)
+            text-align: center
+            font-size: 35pt !important
+            line-height: 40pt
+            top: 15%
+            padding: 10px
+            margin-top: 30px
+            
+
+        +mq(M)
+            text-align: center
+            font-size: 75pt !important
+            line-height: 90pt
+            top: 15%
+            padding: 5px 10px
+
+    &__content-bottom
+        position: absolute
+        display: flex
+        flex-direction: row
+        align-items: center
+        justify-content: space-around
+        bottom: 0
+        left: 0
+        width: 100%
+        background-image: linear-gradient(180deg, rgba(0,0,0,0) 0%, rgba(0,0,0, 0.4) 25%, rgba(0,0,0,0.9) 75%)
+        min-height: 300px
+        color: $white
+
+        span
+            position: relative
+            color: $color_primary
+            font-size: 1.5em
+            line-height: 1.5em
+
+            i
+                position: absolute
+                left: -35px
+                top: 0
+                padding-right: 10px
+                
+        
+        +mq(M)
+            flex-direction: column
+            padding-bottom: 100px
+            padding-top: 70px
+            background-image: linear-gradient(180deg, rgba(0,0,0,0) 0%, rgba(0,0,0, 0.4) 25%, rgba(0,0,0,0.9) 75%)
+
+        +mq(S)
+            flex-direction: column
+            padding-bottom: 120px
+            padding-top: 50px
+            background-image: linear-gradient(180deg, rgba(0,0,0,0) 0%, rgba(0,0,0, 0.4) 15%, rgba(0,0,0,0.9) 75%)
+
+        &__info
+            +mq(L)
+                transform: translateY(-30px)
+
+            +mq(M)
+                text-align: center
+                margin: 10px
+                &:first-child
+                    margin-top: 0
+                &:last-child
+                    margin-bottom: 0
+
+            +mq(S)
+                text-align: center
+                margin: 2px
+                &:first-child
+                    margin-top: 0
+                &:last-child
+                    margin-bottom: 40px
+

@@ -1,0 +1,89 @@
+@import "../_variables.styl"
+@import "../00-mixins/mixins.styl"
+
+.about
+    position: relative
+    display: flex
+    flex-direction: row
+    justify-content: center
+    align-items: center
+    width: 100%
+    height: 70vh
+    
+    +mq(M)
+        margin: 0 50px
+
+    &__container
+        max-width: 1200px
+        width: 100%
+        margin: 0 auto
+        display: flex
+        flex-direction: row
+        justify-content: space-between
+        align-items: center
+
+    &__content
+        max-width: 70%
+        width: 100%
+        margin: 0 20px
+
+        +mq(S)
+            position: relative
+            max-width: 100%
+            text-align: center
+            z-index: 9
+
+    &__images
+        position: relative
+        // max-width: 50%
+        width: 100%
+        margin: 0 50px 0 0
+        height: 300px
+
+        +mq(S)
+            display: none
+
+        img
+            position: absolute
+            padding: 0
+            margin: 0
+            top: 0
+            right: 0
+            max-width: 300px
+
+            +mq(M)
+                max-width: 200px
+
+            &:nth-child(1)
+                opacity: 1
+                transform: translate(-200px, 0)
+                z-index: 5
+
+                +mq(M)
+                    transform: translate(-120px, 0)
+
+                +mq(S)
+                    transform: translate(-50px, 0)
+
+            &:nth-child(2)
+                opacity: 0.5
+                transform: translate(-100px, -100px)
+                z-index: 4
+
+                +mq(M)
+                    transform: translate(-70px, -70px)
+
+                +mq(S)
+                    transform: translate(-40px, -40px)
+
+            &:nth-child(3)
+                opacity: 0.2
+                transform: translate(0, 50px)
+                z-index: 3
+
+                +mq(M)
+                    transform: translate(0, 25px)
+
+                +mq(S)
+                    transform: translate(0, 15px)
+

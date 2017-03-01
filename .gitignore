@@ -1,4 +1,9 @@
 /node_modules
 /public/lib
-.vscode
+/.vscode
 /dist
+composer.json
+composer.lock
+/vendor
+yarn.lock
+.DS_Store

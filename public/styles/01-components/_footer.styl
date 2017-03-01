@@ -1,0 +1,55 @@
+@import "../_variables.styl"
+@import "../00-mixins/mixins.styl"
+
+.footer
+    background-color #000
+
+    &__content
+        max-width: 1200px
+        width: 100%
+        margin: 0 auto
+        display: flex
+        flex-direction: row
+        justify-content: space-between
+        align-items: center
+        line-height: 1.5em
+
+        +mq(S)
+            flex-direction: column
+            text-align: center
+            padding: 0 20px
+            font-size: 0.8em
+
+        p
+            color: $white
+
+            +mq(S)
+                &:first-child
+                    margin-bottom: 20px
+
+            .ion-ios-heart
+                color: $color_danger
+                animation-duration: 4s
+                animation-iteration-count: infinite
+                animation-name: heart-beating
+                margin: 0 10px
+
+                @keyframes heart-beating
+                    0% {
+                        transform: scale(1)
+                    }
+                    45% {
+                        transform: scale(1.2)
+                    }
+                    55% {
+                        transform: scale(1.5)
+                    }
+                    65% {
+                        transform: scale(1.2)
+                    }
+                    75% {
+                        transform: scale(1.5)
+                    }
+                    100% {
+                        transform: scale(1)
+                    }

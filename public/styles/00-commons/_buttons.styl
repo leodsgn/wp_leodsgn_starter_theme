@@ -1,0 +1,63 @@
+@import "../_variables.styl"
+@import "../00-mixins/mixins.styl"
+
+.button
+    display: block
+    border: none
+    padding: 15px 40px
+
+    +mq(S)
+        width: 100%
+
+    &--full
+        width: 100%
+
+    &--success
+        background-color: $color_primary
+        color: $white
+        transition: all 0.2s ease-in-out
+
+        &:hover, &:focus, &:active
+            background-color: darken($color_primary, 20%)
+            color: $white
+
+    &--warning
+        background-color: $color_primary
+        color: $white
+        transition: all 0.2s ease-in-out
+
+        &:hover, &:focus, &:active
+            background-color: darken($color_primary, 20%)
+            color: $white
+
+    &--danger
+        background-color: $color_primary
+        color: $white
+        transition: all 0.2s ease-in-out
+
+        &:hover, &:focus, &:active
+            background-color: darken($color_primary, 20%)
+            color: $white
+
+    &--dark
+        background-color: $dark
+        color: $white
+        border: 1px solid $white
+        transition: all 0.2s ease-in-out
+
+        &:hover, &:focus, &:active
+            background-color: lighten($dark, 10%)
+            border-color: darken($white, 50%)
+            color: $white
+
+    &--light
+        background-color: $white
+        color: $dark
+        border: 1px solid $dark
+        transition: all 0.2s ease-in-out
+
+        &:hover, &:focus, &:active
+            background-color: darken($white, 10%)
+            border-color: lighten($dark, 50%)
+            color: $dark
+
